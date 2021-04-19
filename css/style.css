@@ -85,7 +85,8 @@ main {
 
 /* music section */
 
-.recently_played {
+.container {
+    display: flex;
     flex-wrap: wrap;
 }
 
