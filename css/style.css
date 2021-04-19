@@ -19,6 +19,7 @@ ul li {
 h1 {
     color: white;
     margin-bottom: 6px;
+    font-size: 20px;
 }
 
 #no_subtitle {
@@ -27,9 +28,10 @@ h1 {
 
 
 h2 {
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 }
+
 
 .main-navbar h2 {
     color: gray;
@@ -47,6 +49,11 @@ main h2,
     text-align: center;
 }
 
+h5 {
+    color: gray;
+    font-size: 11px;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -54,7 +61,7 @@ main h2,
 /* header */
 header {
     width: 200px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,6 +75,10 @@ header {
     height: 100%;
 }
 
+.header-bottom ul li:nth-child(2) h4 {
+    color: white;
+}
+
 .logo {
     height: 80px;
     margin-bottom: 20px;
@@ -77,7 +88,8 @@ header {
     height: 80px;
 }
 
-.navbar img {
+.navbar img,
+.header-bottom img {
     width: 20%;
     padding-right: 10px;
     vertical-align: middle;
@@ -87,36 +99,56 @@ header {
     margin-bottom: 20px;
 }
 
-.navbar ul li,
-.playlist ul li {
-    padding: 6px 0;
+.fa-plus-square {
+    padding-right: 10px;
+    vertical-align: middle;
 }
+
+.playlist ul li:nth-child(1) {
+    padding-top: 10px;
+}
+
+#profile_pic {
+    width: 20px;
+    height: 20px;
+    object-fit:contain;
+    background-color: gray;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.header-bottom ul li:nth-child(2) h4 {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+
 
 
 /* main */
 
 main {
     width: calc(100vw - 200px);
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     background-color: #141922;
     overflow-y: auto;
 }
 
 .upgrade-bar {
-    height: 80px;
+    height: 60px;
     width: calc(100% - 200px);
     background: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     position: fixed;
 }
 .upgrade-button {
     float: right;
-    line-height: 40px;
+    line-height: 30px;
     border: 1px solid white;
     border-radius: 30px;
-    padding: 4px 40px;
+    padding: 2px 34px;
     margin-top: 12px;
     margin-right: 30px;
 }
@@ -136,7 +168,7 @@ main {
 /* music section */
 
 .main-navbar{
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .container {
@@ -152,7 +184,6 @@ main {
 .cover img {
     width: 100%;
     object-fit: cover;
-    /* width: calc(16.6% - 20px); */
 }
 .cover h2,
 .cover h4 {
@@ -174,7 +205,107 @@ main {
 footer {
     position: fixed;
     bottom: 0;
-    height: 90px;
-    width: 100%;
-    background-color: darkslategray;
+    height: 80px;
+    width: 100vw;
+    background-color:#282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+footer ul li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+/* footer left */
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.song-played h4 {
+    margin-bottom: 4px;
+    color: white;
+}
+
+.footer-left img {
+    width: 8%;
+}
+
+.save-song h4 {
+    margin: 0;
+}
+
+.song-played,
+.save-song {
+    padding-left: 12px;
+}
+
+/* footer center */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-center ul li {
+    padding: 0 10px;
+}
+
+
+.footer-center h4 {
+    display: inline-block;
+}
+
+.footer-center h4 span {
+    display: inline-block;
+    border: 2px solid grey;
+    background-color: grey;
+    border-radius: 2px;
+    width: 600px;
+    margin: 0px 10px;
+    vertical-align: middle;
+}
+
+.play-bar,
+.volume-bar {
+    position: relative;
+}
+
+.play-bar::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 2px solid lightgray;
+    background-color: lightgray;
+    border-radius: 2px;
+    width: 100px;
+    margin: 0px;
+}
+/* footer right */
+
+.footer-right h2 span {
+    display: inline-block;
+    border: 2px solid grey;
+    background-color: grey;
+    border-radius: 2px;
+    width: 100px;
+    margin: 0px 10px;
+    vertical-align: middle;
+}
+
+.volume-bar::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 2px solid lightgray;
+    background-color: lightgray;
+    border-radius: 2px;
+    width: 20px;
+    margin: 0px;
 }
