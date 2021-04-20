@@ -378,6 +378,33 @@ footer ul li {
     top:-2px;
     left: -2px;
 }
+.play-bar-dot,
+.volume-bar-dot {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    position: absolute;
+    top:-7px;
+    left: 18.5%;
+    visibility: hidden;
+}
+/* play-bar and volume-bar hover */
+.play-bar:hover,
+.volume-bar:hover {
+    cursor: pointer;
+}
+.play-bar:hover .play-bar-dot,
+.volume-bar:hover .volume-bar-dot {
+    visibility: visible;
+}
+.play-bar:hover .play-bar-active,
+.volume-bar:hover .volume-bar-active {
+    border: 2px solid lime;
+    background-color: lime;
+}
 
 /* footer right */
 .footer-right {
