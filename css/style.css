@@ -222,6 +222,7 @@ main {
     font-weight: 600;
     font-size: 12px;
     position: fixed;
+    z-index: 2;
 }
 .upgrade-button {
     float: right;
