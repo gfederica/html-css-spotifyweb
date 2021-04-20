@@ -70,10 +70,19 @@ header {
     padding: 0px 20px;
 }
 
+#logo_small {
+    display: none;
+}
+
 .header-top {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.header-top h4,
+.header-bottom ul li h4 {
+    display: inline-block;
 }
 
 .header-bottom ul li:nth-child(2) h4 {
@@ -112,6 +121,18 @@ header {
 .playlist ul li:nth-child(1) {
     padding-top: 10px;
 }
+  
+#installa_app {
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+#installa_app h4 {
+    margin: 0;
+}
+
+#profile {
+    margin-top: 10px;
+}
 
 #profile_pic {
     width: 20px;
@@ -120,11 +141,7 @@ header {
     background-color: gray;
     padding: 0;
     border-radius: 50%;
-}
-
-.header-bottom ul li:nth-child(2) h4 {
-  display: inline-block;
-  padding-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -133,7 +150,7 @@ header {
 /* main */
 
 main {
-    width: calc(100vw - 200px);
+    width: calc(100% - 200px);
     height: calc(100vh - 80px);
     background-color: #141922;
     overflow-y: auto;
@@ -182,7 +199,7 @@ main {
 }
 
 .cover {
-    width: 180px;
+    width: calc(16.6% - 20px);
     margin-right: 20px;
 }
 
@@ -237,7 +254,7 @@ footer ul li {
 }
 
 .footer-left img {
-    width: 8%;
+    width: 25%;
 }
 
 .save-song h4 {
@@ -246,7 +263,7 @@ footer ul li {
 
 .song-played,
 .save-song {
-    padding-left: 12px;
+    padding-left: 8px;
 }
 
 /* footer center */
@@ -328,6 +345,33 @@ footer ul li {
 
 
 /* media queries */
+@media screen and (max-width: 879px) {
+  .cover {
+      width: calc(25% - 20px);
+  }
+  .main-navbar ul li {
+    padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+  .cover {
+      width: calc(50% - 20px);
+  }
+  .main-navbar ul li {
+    padding: 18px 10px;
+    }
+
+  .footer-left ul li {
+        display: inline;
+        padding: 0;
+    }
+
+    .song-played {
+        padding-right: 18px;
+    }
+}
+
 
 @media screen and (max-width: 580px) {
     .footer-left,
@@ -345,6 +389,54 @@ footer ul li {
         text-align: center;
         width: calc(100% - 300px);
     }
+}
+
+/* xs with collapsed nav view */
+
+@media screen and (max-width: 553px) {
+    header {
+        width: 50px;
+        padding: 15px;
+    }
+    .header-top h4,
+    .playlist,
+    .header-bottom ul li h4 {
+        display: none;
+    }
+
+    .navbar img, 
+    .header-bottom img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .logo {
+        margin-bottom: 0;
+        height: 30px;
+    }
+    .logo img {
+        height: 20px;
+    }
+
+    #logo_big {
+        display: none;
+        position: relative;
+    }
+    #logo_small {
+        display: inline-block;
+        width: 100%;
+    }
+
+    #installa_app {
+        border: none;
+    }
+
+    main {
+        width: calc(100% - 50px);
+    }
+    .upgrade-bar {
+        width: calc(100% - 50px);
+    }    
 }
 
 @media screen and (max-width: 480px) {
