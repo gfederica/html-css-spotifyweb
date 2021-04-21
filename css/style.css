@@ -202,8 +202,25 @@ header {
     margin-right: 10px;
 }
 
-
-
+.active,
+.active_home {
+    position: relative;
+}
+.active::before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 20px;
+    width: 50%;
+    border-bottom:3px solid lime;
+}
+.active_home::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    height: 68%;
+    border-left:3px solid lime;
+}
 
 /* main */
 
@@ -525,6 +542,10 @@ footer ul li {
         border: none;
     }
 
+    .active_home::before  {
+        display:none;
+    }
+
     main {
         width: calc(100% - 50px);
     }
@@ -566,4 +587,10 @@ footer ul li {
     .song-time h4 {
         display: none;
     }
+    .song-played {
+        padding-right: 2px;
+    }
+    .save-song {
+    padding-left: 2px;
+}
 }
